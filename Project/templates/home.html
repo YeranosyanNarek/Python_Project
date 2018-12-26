@@ -1,0 +1,59 @@
+  {% extends "layout.html" %}
+  {% block content%}
+    <div id="demo" class="carousel slide" data-ride="carousel">
+
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+      <li data-target="#demo" data-slide-to="3"></li>
+      <li data-target="#demo" data-slide-to="4"></li>
+    </ul>
+
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="slide" src="../static/slide/img1.jpg" alt="">
+      </div>
+      <div class="carousel-item">
+        <img class="slide" src="../static/slide/img2.jpg" alt="">
+      </div>
+      <div class="carousel-item">
+        <img class="slide" src="../static/slide/img3.jpg" alt="">
+      </div>
+      <div class="carousel-item">
+        <img class="slide" src="../static/slide/img4.jpg" alt="">
+      </div>
+      <div class="carousel-item">
+        <img class="slide" src="../static/slide/img5.jpg" alt="">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev arrow" href="#demo" data-slide="prev">
+      <i class="far fa-arrow-alt-circle-left arrleft"></i>
+    </a>
+    <a class="carousel-control-next arrow" href="#demo" data-slide="next">
+      <i class="far fa-arrow-alt-circle-right arrright"></i>
+    </a>
+
+  </div>
+  <div class="last">
+    <h1 class="latest">Our latest products</h1>
+    <div class="row">
+      {% for row in results %}
+      <div class="col-md-4 product">
+        <div class="pitem">
+          <img class = "img-fluid prodimg" src="../static/products/{{ row[3] }}">
+          <a href="{{ row[5] }}">
+            <h3 class="prodname">{{ row[1] }}</h3>
+            <h5 class="prodprice">Price - {{ row[2] }} AMD</h5>
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  {% endblock content %}

@@ -1,0 +1,333 @@
+body {
+  background-color: #999090 !important;
+}
+
+.navbar-brand{
+  border: 2px solid #28b78d;
+  background-color: transparent;
+  padding: 5px 8px ;
+  border-radius: 50%;
+  font-size: 20px;
+  font-family: 'Monoton', cursive;
+  transition: 1s;
+}
+.navbar-brand:hover{
+  transform: rotateY(360deg);
+  background-color: #28b78d;
+}
+
+.navbar-brand:hover span{
+  color: white;
+}
+
+nav{
+  background-color: black !important;
+}
+
+.navbar-brand span{
+  color: #28b78d;
+  transition: 1s;
+}
+
+.img-logo{
+  width: 100px;
+  height: 100px;
+}
+
+.arrow{
+  background-color: rgba(0,0,0,.3);
+  border-radius: 15px;
+  width: 10%;
+}
+
+.arrleft, .arrright{
+  font-size: 40px;
+  color: lime;
+}
+
+.site-header .navbar-nav .nav-link {
+  color: white;
+  text-align: center;
+  transition: 1s;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  transform: scale(1.3);
+  text-shadow: 0px 0px 10px lime;
+  color: lime;
+}
+
+.site-header .navbar-nav .nav-link.active {
+  font-weight: 500;
+}
+
+main{
+  margin-top: 25px; 
+  margin-bottom: 25px;
+}
+article{
+  background-color: #C8C8C8;
+  border-radius: 10px;
+  padding-top: 25px; 
+  padding-bottom: 25px; 
+  border: 2px solid #3e3e3e;
+
+}
+
+.latest{
+  margin: 15px auto;
+  width: 100%;
+  margin-top: 25px;
+  text-align: center;
+  color: #3e3e3e;
+  padding-top: 25px;
+  border-top: 2px solid #3e3e3e;
+}
+.slide{
+  width: 100%;
+  height: 500px;
+  border-radius: 15px;
+}
+
+.product{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.product:hover .prodimg{
+  transform: scale(1.3);
+}
+.prodname:hover, .prodprice:hover{
+  text-decoration: underline;
+}
+.prodimg{
+  width: 150px;
+  height: 150px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  transition: 1s;
+}
+.pitem{
+  width: 90%;
+  text-align: center;
+  margin: auto;
+  border: 2px solid #3e3e3e;
+  border-radius: 15px;  
+}
+
+.map{
+
+ width: 100%;
+
+ height: 250px;
+
+}
+
+.footname{
+
+ text-align: center;
+
+ color: #C3C3C3;
+
+ text-shadow: 2px 2px 2px black;
+
+}
+
+footer{
+
+ background-color: #404040;
+
+ padding-top: 15px;
+
+ padding-bottom: 25px;
+
+}
+
+footer p{
+
+ color: #C3C3C3;
+
+ text-align: justify;
+
+}
+
+footer .col-md-4, .col-md-2, .col-md-6{
+
+ border-right: 2px solid #C3C3C3;
+
+ border-bottom: 2px solid #C3C3C3;
+
+ padding: 15px;
+
+}
+
+footer li{
+
+ text-align: center;
+
+ list-style-type: none;
+
+}
+
+.soc{
+
+ text-align: center;
+
+ font-size: 45px;
+
+}
+
+.fb, .fb:hover{
+
+ color: #2369FD;
+
+}
+
+.tw, .tw:hover{
+
+ color: #8BCBFC;
+
+}
+
+.inst, .inst:hover{
+
+ color: #F9768F;
+
+}
+
+.yt, .yt:hover{
+
+ color: #FF0100;
+
+}
+
+.soc:hover{
+
+ opacity: .8;
+
+}
+
+.copyright p{
+
+ text-align: center;
+
+}
+
+.copyright{
+
+ margin-top: 15px;
+
+ padding: 0px;
+
+ margin-bottom: 0px;
+
+}
+
+.copyright span{
+
+ font-family: 'Merriweather', serif;
+
+}
+
+.name{
+    font-size: 45px;
+    text-align: center;
+}
+.productimg{
+    border:5px solid black;
+    width:200px;
+    cursor:pointer;
+    height:200px;
+    border-radius: 15px;
+}
+
+.productdesc{
+    font-size: 25px;
+}
+.product_img, .product_desc{
+    vertical-align: top;
+    margin-top: 25px;
+    display: inline-block;
+}
+.product_desc{
+    width:60%;
+    text-align: justify;
+}
+
+.desc_heading{
+    text-align: center;
+}
+
+.buy_btn_div{
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.buy_btn{
+    background-color: green;
+    color: white;
+    padding: 20px 25px;
+    border-radius: 15px;
+    transition: .5s;
+    border: 2px solid #003300;
+}
+.buy_btn:hover{
+    color:white;
+    text-decoration:none;
+    box-shadow: 10px 10px 10px #003300 inset;
+}
+
+.product_img{
+    width: 30%;
+    text-align: center;
+}
+
+.logdiv, .regdiv{
+    text-align: center;
+    width:48%;
+    display: inline-block;
+    margin-top:25px;
+    margin-bottom:25px;
+}
+
+.quest{
+    text-align: center;
+}
+
+.log, .reg{
+    color: black;
+    border:2px solid black;
+    border-radius: 15px;
+    padding: 20px 15px;
+    font-size:25px;
+    transition: 1s;
+}
+.reg{
+    background-color: orange;
+}
+.reg:hover{
+    box-shadow: 10px 10px 15px brown inset;
+}
+
+.log{
+    background-color: lime;
+}
+.log:hover{
+    box-shadow: 10px 10px 15px green inset;
+}
+
+.log:hover, .reg:hover{
+    color: black;
+    text-decoration: none;
+}
+
+.about_txt{
+    color:black;
+    text-align: justify;
+    padding: 25px;
+}
+
+.suc_img{
+    text-align: center;
+}

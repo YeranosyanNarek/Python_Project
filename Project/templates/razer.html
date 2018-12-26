@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+{% for row in results %}
+        <h1 class="name"> {{ row[1] }} </h1>
+        <div class="product_img">
+                <img  class="productimg" src="../static/products/{{ row[3] }}"></img>
+        </div>
+        <div class="product_desc">
+                <h2 class="desc_heading">About</h2>
+                <p class="productdesc">{{ row[4] }}</p>
+        </div>
+        <div class="buy_btn_div">
+                <a class="buy_btn" href="{{ sess }}">BUY | {{ row[2] }} AMD</a>
+        </div>
+
+{% endfor %}
+
+{% endblock content %}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	{% if my_title %}
+		<title>RazeShop | {{my_title}}</title>
+	{% else %}
+		<title>RazeShop | not-found</title>
+	{% endif %}
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/bttn.css/0.2.4/bttn.css">
+    <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+    <link rel="shortcut icon" type="image/jpg" href="../static/favico.jpg"/>
+</head>
+<body>
+	<header class="site-header">
+  <nav class="navbar navbar-expand-md navbar-dark">
+    <div class="container">
+      <a class="navbar-brand mr-4" href="/"><span>R</span></a>
+      <button class="navbar-toggler bg-light text-dark" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+		<i class="fas fa-chevron-circle-down"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarToggle">
+        <div class="navbar-nav mr-auto">
+
+          <a class="nav-item nav-link" href="/">
+            <button class="bttn-unite bttn-sm bttn-success">Home</button>
+          </a>
+
+          <a class="nav-item nav-link" href="/about">
+            <button class="bttn-unite bttn-sm bttn-success">About</button>
+          </a>
+          {% if 'email' in session %}
+          <a class="nav-item nav-link" href="/logout">
+            <button class="bttn-unite bttn-sm bttn-success btnright">Logout</button>
+          </a>
+          {% else %}
+          <a class="nav-item nav-link" href="/register">
+            <button class="bttn-unite bttn-sm bttn-success btnright">Register</button>
+          </a>
+          <a class="nav-item nav-link" href="/login">
+              <button class="bttn-unite bttn-sm bttn-success">Login</button>
+          </a>
+          {% endif %}
+
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<main class="container">
+  <div class="row">
+    <article class="col-md-12">
+      {% with messages = get_flashed_messages(with_categories = true) %}
+          {% if messages %}
+              {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                  {{ message }}
+                </div>
+              {% endfor %}
+          {% endif %}
+      {% endwith %}
+      {% block content%}{% endblock content %}
+    </article>
+  </div>
+</main>
+<footer class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-md-4">
+
+      <h3 class="footname">ABOUT US</h3>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla commodi, molestias laborum porro qui, ipsum, fuga nihil voluptas vitae eveniet eos non voluptatibus? Ratione, error. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime voluptate fugiat corporis dolore minima facere magnam impedit nesciunt beatae ut quam, ex, possimus eligendi. Iure.</p>
+
+    </div>
+
+    <div class="col-md-4">
+
+      <h3 class="footname">FIND US</h3>
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23366495.362472065!2d25.70541267136834!3d44.93109971097475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9cd726df38db0fa5!2sRAZER+Bulgaria+%7C+RAZER.BG!5e0!3m2!1sru!2s!4v1542713910761" class = "map" allowfullscreen></iframe>
+
+    </div>
+
+    <div class="col-md-4">
+
+      <h3 class="footname">CONECT US</h3>
+
+      <ul>
+
+        <li><a href="" class="soc fb"><i class="fab fa-facebook-square"></i></a></li>
+
+        <li><a href="" class="soc yt"><i class="fab fa-youtube-square"></i></a></li>
+
+        <li><a href="" class="soc inst"><i class="fab fa-instagram"></i></a></li>
+
+        <li><a href="" class="soc tw"><i class="fab fa-twitter-square"></i></a></li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+  <div class="copyright">
+
+    <p>
+
+      All rights reserved <i class="far fa-copyright"></i> Site was created by <span>ХакТ1В1сТ & NYR</span>
+
+    </p>
+
+  </div>
+
+</footer>
+</body>
+</html>
